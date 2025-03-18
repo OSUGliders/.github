@@ -4,16 +4,16 @@ The [Glider Research Group](http://gliderfs.coas.oregonstate.edu/gliderweb/) wor
 
 ## Slocum glider processing
 
-We process Slocum glider data using several tools that translate the data from a series of unrefined binary files into a scientifically useful product.
+We translate Slocum glider data from a series of unrefined binary files into a scientifically useful product.
 
-#### Binary conversion tools (L1 processing)
+#### Binary conversion (L1 processing)
 * [`dbd2netcdf`](https://github.com/OSUGliders/dbd2netcdf) converts the Slocum binary data format (tbd, dbd, ... etc) into a time series in netCDF format. It can be used on both the decimated real-time and post-recovery data. Written in C by Pat Welch, it is extremely fast and serves the entrypoint for most subsequent processing steps.
 * [`q2netcdf`](https://github.com/OSUGliders/q2netcdf) converts MicroRider q-files into a netCDF format. The q file is a reduced data format transmitted over iridium. The full microstructure data contained in p files are processed using a different tool described in the microstructure section below.
 
 #### L2 and L3 processing
 * [`glide`](https://github.com/OSUGliders/glide) parses the output of `dbd2netcdf` to produce higher level products, including gliderdac-ready files, and depth-binned output. 
 
-#### Other tools
+#### Piloting helpers
 * [`RecoverBy`](https://github.com/OSUGliders/RecoverBy) estimates the battery life remaining to help with recovery decisions. 
 
 ## Microstructure processing
