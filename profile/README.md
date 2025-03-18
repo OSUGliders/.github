@@ -4,7 +4,7 @@ The [Glider Research Group](http://gliderfs.coas.oregonstate.edu/gliderweb/) wor
 
 ## Slocum glider processing
 
-We process Slocum glider data using several tools detailed below. 
+We process Slocum glider data using several tools that translate the data from a series of unrefined binary files into a scientifically useful product.
 
 #### Binary conversion tools (L1 processing)
 * [`dbd2netcdf`](https://github.com/OSUGliders/dbd2netcdf) converts the Slocum binary data format (tbd, dbd, ... etc) into a time series in netCDF format. It can be used on both the decimated real-time and post-recovery data. Written in C by Pat Welch, it is extremely fast and serves the entrypoint for most subsequent processing steps.
