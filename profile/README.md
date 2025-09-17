@@ -1,6 +1,6 @@
 # Glider Research Group - Oregon State University
 
-The [Glider Research Group](http://gliderfs.coas.oregonstate.edu/gliderweb/) works to understand a diverse range of oceanographic processes, from hypoxia on the US West Coast to submesoscale eddy dynamics in the Western Pacific. We use gliders and other oceanographic tools including moorings, profilers, drifters, and bow chains. We write open-source code to prepare and analyse oceanographic data, and for decision making when in the field. We aim to produce standardized, quality-controlled datasets that are ready for scientific analysis and sharing. 
+The [Glider Research Group](http://gliderfs.coas.oregonstate.edu/gliderweb/) works to understand a diverse range of oceanographic processes, from hypoxia on the US West Coast to submesoscale eddy dynamics in the Western Pacific. We use gliders and other oceanographic tools including moorings, profilers, drifters, and bow chains. We write open-source code to prepare and analyse oceanographic data, and for decision making when in the field. We aim to produce standardized, quality-controlled datasets ready for scientific analysis and sharing. 
 
 ## Slocum glider processing
 
@@ -18,6 +18,12 @@ We translate Slocum glider data from a series of unrefined binary files into a s
 
 ## Microstructure processing
 
-We use Rockland Scientific Instruments (RSI) VMP250 and MicroRider sensors.
+We use Rockland Scientific Instruments (RSI) VMP250 and MicroRider instruments.
 
 * [`perturb`](https://github.com/jessecusack/perturb) is a parallelized MATLAB package built on top of the RSI's ODAS microstructure processing toolbox. It takes in microstructure p files, as well as ancillery data (GPS fixes), and produces complete binned datasets as well as numerous intermediate data products. It has features for assessing data quality and detecting bottom impacts. 
+
+## Computer system configuration
+
+Group operations rely on a suite of virtual machines, usually running Ubuntu Server LTS.
+
+* [`gliderfs`](https://github.com/OSUGliders/gliderfs) is the file server. It is for managing data pipelines.
